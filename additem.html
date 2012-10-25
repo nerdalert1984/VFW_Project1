@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Project 1, Matt Ballert, VFW 1211 -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Submit your game to Startup Gamers." />
+		<meta name="keywords" content="html5, indie games, tabletop, video games, Startup Gamers" />
+		<meta name="robots" content="index, follow." />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<title> Startup Gamers - Submit a Game</title>
+	<link href="" rel="stylesheet" type="text/css"/>
+	<script src="" type= text/javascript"> </script>
+	</head>
+	<body>
+			<h1>Submissions:</h1>
+			<form action="#" method="post">
+				<fieldset>
+					<legend>Information About You</legend>
+					<ul>
+						<li><label for="yourname"</label>Name<br><input type="text" id="yourname"/></li>
+						<li><label for="email"</label>Email Address<br><input type="email" id="email" placeholder="emailaddress@internet.com" /></li>
+						<li><label for="comname"</label>Company Name<br><input type="text" id="comname"/></li>
+						<li><label for="comsite"</label>Company Website<br><input type="url" id="comsite" placeholder="www.mycompany.com" /></li>
+						<li><label for="gname"</label>Game Name<br><input type="text" id="gname"/></li>
+						<li><label for="clink"</label>Link to Crowdfunding Project<br><input type="url" id="clink" placeholder="www.crowdfundsite.com" /></li>
+						<li><label for="estdate"</label>Estimated Release Date<br><input type="date" id="estdate" /></li>
+						<li>
+							<label for="howhear">How did you hear about Startup Gamers?</label>
+							<select id="howhear">
+							
+								<option value="Facebook">Facebook</option>
+								<option value="Twitter">Twitter</option>
+								<option value="Google+">Google+</option>
+								<option value="Other">Other</option>
+							</select>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Information About Your Game</legend>
+					<ul>
+						<li>Is this your first game?
+							<ul>
+							<li><input type="radio" value="Yes" id="yes" name="isfirst" /><label for="yes"></label>Yes.</li>
+							<li><input type="radio" value="No" id="no" name="isfirst" /><label for="no">No</label></li>
+							</ul>
+						</li>
+						<li>What Platforms Do You Support? (Check All That Apply)<br>
+							Tabletop
+							<ul>
+							<li><input type="checkbox" value="Board Game" id="bgame" name="platform" /><label for="bgame"></label>Board Game</li>
+							<li><input type="checkbox" value="Role Playing Game" id="rpg" name="platform" /><label for="rpg"></label>Role Playing Game</li>
+							<li><input type="checkbox" value="Card Game" id="cgame" name="platform" /><label for="cgame"></label>Card Game</li>
+							</ul>
+							Computer
+							<ul>
+							<li><input type="checkbox" value="PC" id="pc" name="" /><label for=""></label>PC</li>
+							<li><input type="checkbox" value="Mac" id="mac" name="platform" /><label for="mac"></label>Mac</li>
+							<li><input type="checkbox" value="Linux" id="linux" name="platform" /><label for="linux"></label>Linux</li>
+							</ul>
+							Console
+							<ul>
+							<li><input type="checkbox" value="PS3" id="ps3" name="platform" /><label for="ps3"></label>PS3</li>
+							<li><input type="checkbox" value="XBOX 360" id="xbox" name="platform" /><label for="xbox"></label>XBOX 360</li>
+							<li><input type="checkbox" value="Wii" id="wii" name="platform" /><label for="wii"></label>Wii</li>
+							</ul>
+							Mobile
+							<ul>
+							<li><input type="checkbox" value="iOS" id="ios" name="platform" /><label for="ios"></label>iOS</li>
+							<li><input type="checkbox" value="Android" id="droid" name="platform" /><label for="droid"></label>Android</li>								<li><input type="checkbox" value="DS/3DS" id="ds" name="platform" /><label for="ds"></label>DS/3DS</li>
+							<li><input type="checkbox" value="PS Vita" id="vita" name="platform" /><label for="vita"></label>PS Vita</li>
+							</ul>
+						</li>
+						<li>How many people are on your development team?
+							<input id="slider1" type="range" min="0" max="20" step="1" />
+						</li>
+						<li><label for"description">What is your game about?</label><textarea id="description">Describe your game here.</textarea></li>
+						<li><input type="hidden" value="true" /></li>
+					</ul>
+				</fieldset>
+				<input type="submit" value="Submit My Game" />
+				<input type="reset" value="Clear" />
+			</form>
+	</body>
+</html>
+		
