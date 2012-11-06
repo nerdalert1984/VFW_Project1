@@ -1,0 +1,37 @@
+/*
+Matt Ballert
+VFW 1211
+CSS for Project Week 2
+*/
+
+body {
+	background-color: #000000;
+}
+
+h1 {
+	text-align: center;
+	
+}
+
+h2 {
+	background-color: #000000;
+	color: #ffffff;
+	font-style: italic;
+	text-shadow: 0 0 0.2em #dc143c, 0 0 0.2em #dc143c, 0 0 0.2em #dc143c; 
+}
+
+p {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+/* HTML Tag 8 */
+a:link {
+	color: #dc143c ;
+}
+
+/* HTML Tag 9 */
+a:visited {
+	color: #ffffff;
+}
+

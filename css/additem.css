@@ -1,0 +1,63 @@
+/*
+Matt Ballert
+VFW 1211
+CSS for Project Week 2
+*/
+
+/* HTML Tag 1 */
+h1 { 
+	font: 30px ariel,  sans-serif; /* CSS Property 1 */
+	font-weight: bold; /* CSS Property 2 */
+	color: #dc143c; /* CSS Property 3 */
+	text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff, 0 0 0.2em #ffffff; /* CSS Property 4 */
+
+}
+
+/* HTML Tag 2 */
+legend { 
+		margin: 15px; /* CSS Property 5 */
+		border: 1px solid #ffffff; /* CSS Property 6 */
+		background-color: #000000; /* CSS Property 7 */
+		color: 	#ffffff; 
+		text-align: center; /* CSS Property 8 */
+
+}
+
+/* HTML Tag 3 */
+fieldset {
+	background-color: #dc143c;
+	margin-bottom: 10px /* CSS Property 9 */
+}
+
+/* HTML Tag 4 */
+body {
+	background-color: #000000;
+}
+
+/* HTML Tag 5 */
+li {
+	color: #ffffff;
+	padding-bottom: 15px; /* CSS Property 10 */
+}
+/* HTML Tag 6 */
+input {
+	margin-top: 5px; /* CSS Property 11 */
+	background-color: #ffffff;
+	
+	
+}
+/* HTML Tag 7 */
+select {
+	background-color: #ffffff;
+}
+/* HTML Tags 8+9 are in the CSS stylesheet index.css for the launch page. */
+
+/* HTML Tag 8 */
+a:link {
+	color: #dc143c ;
+}
+
+/* HTML Tag 9 */
+a:visited {
+	color: #ffffff;
+}
