@@ -1,6 +1,6 @@
 // Matt Ballert
 // VFW 1211
-// CSS for Project Week 2
+// JS for Project Week 4
 
 window.addEventListener("DOMContentLoaded", function () {
 
@@ -11,34 +11,34 @@ window.addEventListener("DOMContentLoaded", function () {
 	}
 
 //	Select Field
-//	function howHear (){
-//		var formTag = document.getElementById("howhear"),
-//		selectListItem = $("select"),
-//		makeSelect = document.createElement("select");
-//		makeSelect.setAttribute("id", "How Did You Hear About Us?");
-//	for(var i=0, j=howHeard.length; i<j; i++){
-//		var makeOption = document.createElement("option");
-//		var optText = howHeard[i];
-//		makeOption.setAttribute("value", optText);
-//		makeOption.innerHTML = optText;
-//		makeSelect.appendChild(makeOption);
-//	}
-//	selectListItem.appendChild(makeSelect);
-//	}
+	function howHear (){
+		var formTag = document.getElementById("howhear"),
+		selectListItem = $("select"),
+		makeSelect = document.createElement("select");
+		makeSelect.setAttribute("id", "How Did You Hear About Us?");
+	for(var i=0, j=howHeard.length; i<j; i++){
+		var makeOption = document.createElement("option");
+		var optText = howHeard[i];
+		makeOption.setAttribute("value", optText);
+		makeOption.innerHTML = optText;
+		makeSelect.appendChild(makeOption);
+	}
+	selectListItem.appendChild(makeSelect);
+	}
 	
 	function getSelectedRadio(){
-		var radios = document.forms[0].isfirst;
-		for(var i = 0; i<radio.length; i++){
-			if(radios[i].checked){
-			firstValue = radios[i].value;
+		var radio = document.forms[0].isfirst;
+		for(var i = 0; i<radios.length; i++){
+			if(radio[i].checked){
+			firstValue = radio[i].value;
 			}
 		}
 	}
 	function getCheckboxValue(){
 		if($('table').checked){
-			platValue = $('table')
+			platValue = $('table').value
 		}else{
-			platValue = $('video')
+			platValue = $('video').value
 		}
 	}
 	
@@ -89,7 +89,8 @@ window.addEventListener("DOMContentLoaded", function () {
 	function getData(){
 		toggleControls("on")
 		if(localStorage.length === 0){
-			alert("There is no data in Local Storage.")
+			alert("There is no data in Local Storage so default data was added.")
+			autoFillData();
 		}
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
@@ -106,6 +107,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement('ul');
 			makeli.appendChild(makeSubList);
+			getImage(obj.howHeard[1], makeSubList);
 			for(var n in obj){
 				var makeSubli = document.createElement('li')
 				makeSubList.appendChild(makeSubli);
@@ -117,13 +119,28 @@ window.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 	
+	function getImage(hearImg, makeSubList){
+		var imageLi = document.createElement('li');
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement('img');
+		var setSrc = newImg.setAttribute("src", "images/"+ hearImg +".jpeg");
+		imageLi.appendChild(newImg);
+	}
+	
+	function autoFillData(){
+		for(var n in json){
+			var id 				= Math.floor(Math.random()*100000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+	}
+	
 	function makeItemLinks(key, linksLi){
 		var editLink = document.createElement('a');
 		editLink.href = "#";
 		editLink.key = key;
 		var editText = "Edit Information";
 		editLink.addEventListener("click", editItem);
-		aditLink.innerHTML = editText;
+		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
 		
 		var breakTag = document.createElement('br')
@@ -153,9 +170,9 @@ window.addEventListener("DOMContentLoaded", function () {
 		$('estdate').value = item.estdate[1]
 		$('howhear').value = item.howhear[1]
 		var radios = document.forms[0].firstgame;
-		for (var i=0; i<radios.length; i++){
-			if(radios[i].value == "Yes" && item.firstgame[1] == "Yes"){
-			}else if(radios[i].value == "No" && item.firstgame[1] == "No"){
+			for (var i=0; i<radios.length; i++){
+				if(radios[i].value == "Yes" && item.firstgame[1] == "Yes"){
+				}else if(radios[i].value == "No" && item.firstgame[1] == "No"){
 				radios[i].setAttribute("checked", "checked");
 			}
 		}
